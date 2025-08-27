@@ -107,7 +107,7 @@ export default function ProjectsSection() {
       <div className="bg-yellow-400  h-[650px] flex flex-col  rounded-lg shadow-lg relative w-full mb-8">
         <div className="w-full px-8 py-6">
           {paginatedProjects.map((project, idx) => (
-            <div key={idx} className="bg-white p-3 rounded-lg shadow-sm mb-4 last:mb-0">
+            <div key={idx} className="border-black border-b-2 border-dotted  p-3 rounded-lg shadow-sm mb-4 last:mb-0">
               <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
               <p className="text-sm text-gray-600 mb-3">{project.desc}</p>
               <div className="flex space-x-2 mb-4">

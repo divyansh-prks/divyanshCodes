@@ -64,7 +64,7 @@ export default function OpenSourceSection() {
       <div className="bg-yellow-400  h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
         <div className="w-full px-8 py-6   ">
           {currentContributions.map((contrib, idx) => (
-            <div key={idx} className="bg-white p-2 rounded-lg shadow-sm mb-4 last:mb-0">
+            <div key={idx} className="border-black border-b-2 border-dotted  p-2 rounded-lg shadow-sm mb-4 last:mb-0">
               <h4 className="text-lg font-bold mb-2">{contrib.title}</h4>
               <p className="text-sm text-gray-600 mb-3">Organization - {contrib.project}</p>
               <p className="text-sm text-gray-600 mb-3">{contrib.desc}</p>

@@ -35,7 +35,7 @@ export default function CuriousSection() {
       <div className="bg-yellow-400  h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
         <div className="w-full px-8 py-6">
           {currentWorks.map((work, idx) => (
-            <div key={idx} className="bg-white p-5 rounded-lg shadow-sm mb-4 last:mb-0">
+            <div key={idx} className="border-black border-b-2 border-dotted  p-5 rounded-lg shadow-sm mb-4 last:mb-0">
               <h4 className="text-lg font-semibold mb-2">{work.title}</h4>
               <p className="text-sm text-gray-600 mb-3">{work.desc}</p>
               <a href={work.link} className="flex items-center text-sm text-gray-800 hover:text-gray-600">
