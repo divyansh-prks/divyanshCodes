@@ -2,41 +2,18 @@ import { Heart, ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 
 const curiousWorks = [
-  {
-    title: 'AI Art Generator',
-    desc: 'Experimenting with machine learning to create unique digital art pieces. Exploring the intersection of creativity and technology.',
-    link: '#',
+   {
+    title: 'How Your Machine UnderStand Human Language ?',
+    desc: 'Do you know How our computers who only can understand 0/1s are able to understand human language ? ',
+    link: 'https://x.com/coder_divyansh/status/1953371647773168002',
   },
+ 
   {
-    title: 'Urban Garden Tracker',
-    desc: 'Building an IoT system to monitor and optimize urban garden conditions using sensors and data visualization.',
-    link: '#',
+    title: 'How Your system Track time ?',
+    desc: 'Do you know how your System or Laptop counts accurate Timing even if you are offline or your system is shut down',
+    link: 'https://x.com/coder_divyansh/status/1952263684837065037',
   },
-  {
-    title: 'Music Visualization',
-    desc: 'Creating real-time visualizations that respond to music, combining audio analysis with creative coding.',
-    link: '#',
-  },
-  {
-    title: 'Community Workshop Series',
-    desc: 'Organizing free coding workshops for underserved communities to help bridge the digital divide.',
-    link: '#',
-  },
-  {
-    title: 'Robotics Playground',
-    desc: 'Prototyping small robots and experimenting with automation and sensors.',
-    link: '#',
-  },
-  {
-    title: 'Data Storytelling',
-    desc: 'Visualizing complex data sets to tell compelling stories and uncover insights.',
-    link: '#',
-  },
-  {
-    title: 'Language Learning App',
-    desc: 'Building a gamified app to help people learn new languages more effectively.',
-    link: '#',
-  },
+ 
 ];
 
 export default function CuriousSection() {

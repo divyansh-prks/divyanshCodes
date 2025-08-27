@@ -1,54 +1,53 @@
-import { Github, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Github, ArrowLeft, ArrowRight, GitMerge } from 'lucide-react';
 import React, { useState } from 'react';
 
 const contributions = [
-  {
-    title: 'React Component Library',
-    desc: 'Contributed to a popular React component library with new components and bug fixes.',
-    prs: 15,
-    link: '#',
+    {
+    project : "CNCF(Microcks)" ,
+    title: 'Shorten Link',
+    desc: ' Shorten the Linkedin Url Page link',
+
+    link: 'https://github.com/microcks/microcks.io/pull/317',
   },
   {
-    title: 'Documentation Project',
-    desc: 'Improved documentation and examples for a popular JavaScript framework.',
-    prs: 8,
-    link: '#',
+    project : "CNCF(Microcks)" ,
+    title: 'Improve the performance of the website',
+    desc: ' Removed stuff that was taking much time',
+
+    link: 'https://github.com/microcks/microcks.io/pull/311',
   },
   {
-    title: 'Node.js Utility',
-    desc: 'Added new features and fixed bugs in a Node.js utility library.',
-    prs: 12,
-    link: '#',
+
+    project : "Beautiify" ,
+    
+    title: 'Responsive page',
+    desc: 'Made a responsive page in a Phaser Library Project ',
+
+    link: 'https://github.com/AthenaFoss/BH-ZO/pull/11',
+  },
+
+  {
+    project : "Beautiify" ,
+
+    title: ' Scroll Bar',
+    desc: 'added a Stylish ScrollBar (Under Swoc Program) ',
+
+    link: 'https://github.com/Rakesh9100/Beautiify/pull/148',
   },
   {
-    title: 'CSS Framework',
-    desc: 'Enhanced theming and accessibility in a CSS framework.',
-    prs: 7,
-    link: '#',
+    project : "Beautiify" ,
+
+    title: ' Cup Loader',
+    desc: 'added a Cup Loader Effect (Under Swoc Program) ',
+
+    link: 'https://github.com/Rakesh9100/Beautiify/pull/108',
   },
-  {
-    title: 'Open Data API',
-    desc: 'Improved API documentation and added new endpoints.',
-    prs: 10,
-    link: '#',
-  },
-  {
-    title: 'Testing Library',
-    desc: 'Contributed new test utilities and improved coverage.',
-    prs: 6,
-    link: '#',
-  },
-  {
-    title: 'DevOps Scripts',
-    desc: 'Automated deployment scripts and CI/CD improvements.',
-    prs: 9,
-    link: '#',
-  },
+
 ];
 
 export default function OpenSourceSection() {
   const [page, setPage] = useState(0);
-  const prsPerPage = 5;
+  const prsPerPage = 4;
   const totalPages = Math.ceil(contributions.length / prsPerPage);
 
   const handlePrev = () => setPage((p) => (p > 0 ? p - 1 : p));
@@ -66,10 +65,15 @@ export default function OpenSourceSection() {
         <div className="w-full px-8 py-6   ">
           {currentContributions.map((contrib, idx) => (
             <div key={idx} className=" p-2 rounded-lg shadow-sm mb-4 last:mb-0">
-              <h4 className="text-lg font-semibold mb-2">{contrib.title}</h4>
+              <h4 className="text-lg font-bold mb-2">{contrib.title}</h4>
+              <p className="text-sm text-gray-600 mb-3">Organization - {contrib.project}</p>
               <p className="text-sm text-gray-600 mb-3">{contrib.desc}</p>
+
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">{contrib.prs} PRs merged</span>
+                <span className="text-sm text-violet-600 flex items-center">
+                  <GitMerge size={16} className="mr-1" />
+                  {contrib.prs} merged
+                </span>
                 <a href={contrib.link} className="flex items-center text-sm text-gray-800 hover:text-gray-600">
                   <Github size={14} className="mr-1" /> View
                 </a>

@@ -3,55 +3,21 @@ import React, { useState } from 'react';
 
 const blogs = [
   {
-    title: 'Understanding Modern Web Development',
-    desc: 'Exploring the latest trends and best practices in web development...',
-    link: '#',
+    title: 'How Computer Internally works?',
+    desc: 'Have you ever thought after pressing your Keyboard key what is happening in the Keyboard and behind the scenes?',
+    link: 'https://techwithdivyansh.hashnode.dev/how-computer-internally-works',
   },
-  {
-    title: 'Building Scalable Applications',
-    desc: 'Key principles for creating applications that grow with your business...',
-    link: '#',
+     {
+    title: 'where to find hackathons?',
+    desc: 'Do you like attending hackthons and dont know where to go?',
+    link: 'https://dev.to/divyansh2375/where-to-find-hackathons-4178',
   },
-  {
-    title: 'The Future of Technology',
-    desc: 'Thoughts on emerging technologies and their impact on society...',
-    link: '#',
+   {
+    title: 'How to increase Interest towards Coding?',
+    desc: 'Do you want to increase your interest towards coding ?',
+    link: 'https://techwithdivyansh.hashnode.dev/how-to-increase-more-interest-towards-coding',
   },
-  {
-    title: 'UI/UX Best Practices',
-    desc: 'How to design user interfaces that delight and engage users...',
-    link: '#',
-  },
-  {
-    title: 'Effective Remote Work',
-    desc: 'Tips and tools for staying productive while working remotely...',
-    link: '#',
-  },
-  {
-    title: 'State Management in React',
-    desc: 'A deep dive into state management solutions for React apps...',
-    link: '#',
-  },
-  {
-    title: 'Progressive Web Apps',
-    desc: 'How to build fast, reliable, and engaging PWAs...',
-    link: '#',
-  },
-  {
-    title: 'Accessibility Matters',
-    desc: 'Making the web accessible for everyone...',
-    link: '#',
-  },
-  {
-    title: 'Testing JavaScript Applications',
-    desc: 'Best practices for testing your JS code...',
-    link: '#',
-  },
-  {
-    title: 'Deploying with Docker',
-    desc: 'A beginner’s guide to deploying apps using Docker...',
-    link: '#',
-  },
+
 ];
 
 export default function BlogsSection() {
@@ -70,8 +36,8 @@ export default function BlogsSection() {
         <FileText className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">My Blogs</h3>
       </div>
-      <div className="bg-white h-[700px] flex flex-col justify-center items-center rounded-lg shadow-lg relative w-full">
-        <div className="w-full px-8 py-2">
+      <div className="bg-white h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
+        <div className="w-full px-8 py-5">
           {currentBlogs.map((blog, idx) => (
             <article key={idx} className="mb-6 last:mb-0">
               <h4 className="text-lg font-semibold mb-2">{blog.title}</h4>

@@ -3,35 +3,55 @@ import React, { useState } from 'react';
 
 const experiences = [
   {
-    title: 'Senior Software Engineer',
-    company: 'Company Name',
-    duration: '2022 - Present',
-    desc: 'Led development of key features and mentored junior developers. Focused on building scalable web applications using modern technologies.',
+    title: 'Open Source Contributer',
+    company: 'Microcks (CNCF Project)',
+     companyUrl: 'https://microcks.io/',
+    duration: 'Feb 2025 – Apr 2025',
+    desc: [
+      "Improved website performance for loading videos",
+      " Proposed SEO optimization solutions",
+      "Implemented URL shortening and fixed typos in docs"
+    ]
   },
   {
-    title: 'Software Engineer',
-    company: 'Previous Company',
-    duration: '2020 - 2022',
-    desc: 'Developed and maintained web applications, collaborated with cross-functional teams, and contributed to architectural decisions.',
+    title: 'Full Stack Developer',
+    company: 'Vulpinix Production',
+     companyUrl: 'https://www.vulpinixproductions.com/',
+
+    duration: 'Nov 2024 – Jan 2025',
+    desc: [
+      "Developed a story-based portfolio and MVP for digital ads",
+      " Wrote PRD documents",
+      "Designed attractive landing pages",
+      " Fixed positions of icons",
+      "Implemented Authentication"
+    ],
   },
   {
-    title: 'Intern',
-    company: 'Startup Inc.',
-    duration: '2019 - 2020',
-    desc: 'Assisted in building MVPs and learned agile development practices.',
+    title: 'Open Source Contributer',
+    company: 'SWOC- Social Winter Of Code',
+       companyUrl: 'https://www.linkedin.com/company/socialwinterofcode/?originalSubdomain=in',
+    duration: 'Jan 2024 – Feb 2024',
+    desc: [
+      "Added stylish scroll bar", " Added cup loader to the project"
+    ],
   },
   {
-    title: 'Freelancer',
-    company: 'Self-employed',
-    duration: '2018 - 2019',
-    desc: 'Worked on various web projects for small businesses and startups.',
+    title: 'Open Source Contributor ',
+    company: 'Real Dev Squad',
+     companyUrl: 'https://realdevsquad.com/',
+    duration: 'Jun 2023 – Sep 2023',
+    desc: [
+      "Built lift simulation and Discord bot",
+"Practiced TDD and collaborated on business logic"
+    ],
   },
   // Add more experiences if you want more than one page
 ];
 
 export default function ExperienceSection() {
   const [page, setPage] = useState(0);
-  const expsPerPage = 5;
+  const expsPerPage = 3;
   const totalPages = Math.ceil(experiences.length / expsPerPage);
 
   const handlePrev = () => setPage((p) => (p > 0 ? p - 1 : p));
@@ -45,18 +65,34 @@ export default function ExperienceSection() {
         <Briefcase className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">Experience</h3>
       </div>
-      <div className="bg-white h-[700px] flex flex-col justify-center items-center rounded-lg shadow-lg relative w-full">
+      <div className="bg-white h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
         <div className="w-full px-8 py-2">
           {currentExps.map((exp, idx) => (
             <div key={idx} className="bg-white p-5 rounded-lg shadow-sm mb-4 last:mb-0">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h4 className="text-lg font-semibold">{exp.title}</h4>
-                  <p className="text-sm text-gray-600">{exp.company}</p>
+                       <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 hover:underline"
+                  >
+                    {exp.company}
+                  </a>
                 </div>
                 <span className="text-sm text-gray-500">{exp.duration}</span>
               </div>
-              <p className="text-sm text-gray-700">{exp.desc}</p>
+              {Array.isArray(exp.desc) ? (
+                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                    {exp.desc.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-gray-700">{exp.desc}</p>
+                )}
+              
             </div>
           ))}
         </div>

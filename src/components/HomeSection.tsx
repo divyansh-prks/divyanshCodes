@@ -1,13 +1,29 @@
 import { Mail, Github } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function HomeSection() {
   return (
     <section className="max-w-3xl mx-auto px-8 py-12">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Hello, I'm a Developer</h2>
-        <p className="text-sm text-gray-600 mb-6 max-w-xl mx-auto">
-          Passionate about creating meaningful solutions through code and exploring the intersection of technology and creativity.
-        </p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Hello, I'm Divyansh</h2>
+        <div className="mb-6 text-lg font-semibold text-green-800 h-8">
+          <Typewriter
+            words={[
+            "I build and code with pure intent,",
+  "Backend magic, hours well spent.",
+  "DevOps flows in pipelines tight,",
+  "Reverse engineering late at night.",
+  "Robotics dreams that take their flight."
+            ]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
+        </div>
+     
         <div className="flex justify-center space-x-4">
           <a href="mailto:your@email.com" className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm">
             <Mail size={16} />

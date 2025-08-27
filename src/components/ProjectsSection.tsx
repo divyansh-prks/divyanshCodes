@@ -4,66 +4,54 @@ import { Code, Github, ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react'
 const projects = {
   frontend: [
     {
-      title: 'E-Commerce Platform',
-      desc: 'A full-stack e-commerce solution built with React and Node.js',
-      tags: ['React', 'Node.js'],
-      code: '#',
-      demo: '#',
+      title: 'NetFlix Watch',
+      desc: 'A video Streaming website Like a Netflix',
+      tags: ['React js', 'Redux ToolKit' , "Router" , "Firebase" , "TailwindCSS"],
+      code: 'https://github.com/divyansh-prks/Netflix-watch',
+      demo: 'https://netflix-watch-one.vercel.app/',
     },
     {
-      title: 'Weather Dashboard',
-      desc: 'Real-time weather monitoring with interactive charts',
-      tags: ['JavaScript', 'API'],
-      code: '#',
-      demo: '#',
+      title: '2d Portfolio',
+      desc: 'A gamified Version of Portfolio where it describes about the person in a story format',
+      tags: ['Phaser', 'Javascript' , "MongoDb"],
+      code: 'https://github.com/divyansh-prks/portfolio-',
+      demo: 'https://portfolio-vulp.vercel.app/',
     },
   ],
   backend: [
     {
-      title: 'API Service',
-      desc: 'RESTful API for a mobile app, built with Express and MongoDB',
-      tags: ['Express', 'MongoDB'],
-      code: '#',
-      demo: '#',
+      title: 'URL Shortener',
+      desc: 'A website which shorten your url link',
+      tags: [ 'React ' ,'NodeJs',  'Express', 'MongoDB'],
+      code: 'https://github.com/divyansh-prks/urlShortener',
+      demo: 'https://x.com/coder_divyansh/status/1874487132984901647',
     },
-    {
-      title: 'Authentication Server',
-      desc: 'OAuth2 authentication server for secure login',
-      tags: ['Node.js', 'OAuth2'],
-      code: '#',
-      demo: '#',
-    },
+  
   ],
   devops: [
     {
-      title: 'UI Component Library',
-      desc: 'Reusable UI components for React projects',
-      tags: ['React', 'Storybook'],
+      title: 'CI/CD Pipeline with GitHub Actions - (InProgress)',
+      desc: 'Create a pipeline that builds, tests, and deploys a sample app (Node.js, Python, or Java)',
+      tags: ["CI/CD"," automation", "Docker", "testing integration"],
       code: '#',
       demo: '#',
     },
-    {
-      title: 'Landing Page Design',
-      desc: 'Modern landing page with animations',
-      tags: ['HTML', 'CSS', 'Framer Motion'],
-      code: '#',
-      demo: '#',
-    },
+   
   ],
   other: [
     {
-      title: 'Task Management App',
-      desc: 'A productivity app for managing tasks and projects efficiently',
-      tags: ['Vue.js', 'Firebase'],
-      code: '#',
-      demo: '#',
+      title: 'Student Api',
+      desc: 'A full backend Api for student In Golang',
+      tags: ['GoLang'],
+      code: 'https://github.com/divyansh-prks/studentApi',
+      demo: 'Inprogress',
     },
     {
-      title: 'CLI Tool',
-      desc: 'A command-line tool for automating workflows',
-      tags: ['Node.js', 'CLI'],
-      code: '#',
-      demo: '#',
+      title: 'CLI ToDo',
+      desc: 'A application where you can write your todolist on your terminal',
+      tags: ["Golang"],
+      code: 'https://github.com/divyansh-prks/CLI-Todo-',
+      demo: 'https://www.youtube.com/watch?v=3sv-jieY-uc',
     },
   ],
 };
@@ -78,7 +66,7 @@ const categories = [
 export default function ProjectsSection() {
   const [activeCategory, setActiveCategory] = useState('frontend');
   const [page, setPage] = useState(0);
-  const projectsPerPage = 5;
+  const projectsPerPage = 4;
   const currentProjects = projects[activeCategory];
   const totalPages = Math.ceil(currentProjects.length / projectsPerPage);
 
@@ -119,7 +107,7 @@ export default function ProjectsSection() {
       <div className="bg-white h-[650px] flex flex-col  rounded-lg shadow-lg relative w-full mb-8">
         <div className="w-full px-8 py-6">
           {paginatedProjects.map((project, idx) => (
-            <div key={idx} className="bg-white p-5 rounded-lg shadow-sm mb-4 last:mb-0">
+            <div key={idx} className="bg-white  rounded-lg shadow-sm mb-4 last:mb-0">
               <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
               <p className="text-sm text-gray-600 mb-3">{project.desc}</p>
               <div className="flex space-x-2 mb-4">
