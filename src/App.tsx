@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-yellow-50 text-black">
+    <div className="min-h-screen bg-yellow-400 text-black">
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       {renderContent()}
     </div>

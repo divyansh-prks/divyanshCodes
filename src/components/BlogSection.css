@@ -1,0 +1,12 @@
+.book-page {
+  transition: transform 0.5s cubic-bezier(0.77,0,0.175,1);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1200px;
+}
+.turn-page-right {
+  transform: rotateY(-90deg) scale(0.98);
+}
+.turn-page-left {
+  transform: rotateY(90deg) scale(0.98);
+}
