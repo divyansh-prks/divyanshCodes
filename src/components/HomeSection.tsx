@@ -25,11 +25,11 @@ export default function HomeSection() {
         </div>
      
         <div className="flex justify-center space-x-4">
-          <a href="mailto:your@email.com" className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm">
+          <a href="mailto:divyansh2375@gmail.com" className="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm">
             <Mail size={16} />
             <span>Contact</span>
           </a>
-          <a href="https://github.com" className="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm">
+          <a href="https://github.com/divyansh-prks" className="flex items-center space-x-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors text-sm">
             <Github size={16} />
             <span>GitHub</span>
           </a>
