@@ -36,10 +36,10 @@ export default function BlogsSection() {
         <FileText className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">My Blogs</h3>
       </div>
-      <div className="bg-white h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
+      <div className="bg-yellow-400 h-[700px] flex flex-col  rounded-lg  shadow-lg relative w-full">
         <div className="w-full px-8 py-5">
           {currentBlogs.map((blog, idx) => (
-            <article key={idx} className="mb-6 last:mb-0">
+            <article key={idx} className="bg-white p-3 rounded-lg mb-6 last:mb-0">
               <h4 className="text-lg font-semibold mb-2">{blog.title}</h4>
               <p className="text-sm text-gray-600 mb-2">{blog.desc}</p>
               <a href={blog.link} className="flex items-center text-sm text-gray-800 hover:text-gray-600">

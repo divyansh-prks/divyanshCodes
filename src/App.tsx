@@ -30,7 +30,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-yellow-400 text-black">
+    <div className="min-h-screen bg-grey-200 text-black"
+     style={{
+      backgroundImage:
+        "repeating-linear-gradient(0deg, transparent, transparent 22px, #e5e7eb 24px, transparent 26px), repeating-linear-gradient(90deg, transparent, transparent 22px, #e5e7eb 24px, transparent 26px)",
+      backgroundSize: "24px 24px"
+    }}
+    >
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       {renderContent()}
     </div>

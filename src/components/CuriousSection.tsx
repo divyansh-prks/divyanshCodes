@@ -32,7 +32,7 @@ export default function CuriousSection() {
         <Heart className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">Curious Work</h3>
       </div>
-      <div className="bg-white h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
+      <div className="bg-yellow-400  h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
         <div className="w-full px-8 py-6">
           {currentWorks.map((work, idx) => (
             <div key={idx} className="bg-white p-5 rounded-lg shadow-sm mb-4 last:mb-0">
