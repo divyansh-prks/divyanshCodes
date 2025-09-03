@@ -26,6 +26,13 @@ const projects = {
     },
   ],
   backend: [
+       {
+      title: 'BuildwithAi',
+      desc: 'A website Can make your website using Ai ',
+      tags: [ 'ingress ' ,'e2b',  'nextjs', 'prisma' , 'postgresql'],
+      code: 'https://github.com/divyansh-prks/nocodeVibe',
+      // demo: 'https://x.com/coder_divyansh/status/1874487132984901647',
+    },
     {
       title: 'URL Shortener',
       desc: 'A website which shorten your url link',
