@@ -17,6 +17,13 @@ const projects = {
       code: 'https://github.com/divyansh-prks/portfolio-',
       demo: 'https://portfolio-vulp.vercel.app/',
     },
+        {
+      title: 'Naruto Anime',
+      desc: 'Naruto thme ',
+      tags: ["NextJs" , "Skipper UI"],
+      code: 'https://github.com/divyansh-prks/naruto',
+      demo: 'https://www.youtube.com/watch?v=aJMXAsfQji4',
+    },
   ],
   backend: [
     {
