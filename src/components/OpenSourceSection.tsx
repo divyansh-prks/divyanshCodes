@@ -1,5 +1,5 @@
-import { Github, ArrowLeft, ArrowRight, GitMerge } from 'lucide-react';
-import React, { useState } from 'react';
+import { Github, ArrowLeft, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 
 const contributions = [
     {
@@ -61,20 +61,16 @@ export default function OpenSourceSection() {
         <Github className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">Open Source Contributions</h3>
       </div>
-      <div className="bg-yellow-400  h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
-        <div className="w-full px-8 py-6   ">
+      <div className="bg-yellow-400 min-h-[700px] flex flex-col rounded-lg shadow-lg relative w-full overflow-hidden">
+        <div className="w-full px-4 sm:px-8 py-6 overflow-y-auto pb-20">
           {currentContributions.map((contrib, idx) => (
-            <div key={idx} className="border-black border-b-2 border-dotted  p-2 rounded-lg shadow-sm mb-4 last:mb-0">
-              <h4 className="text-lg font-bold mb-2">{contrib.title}</h4>
-              <p className="text-sm text-gray-600 mb-3">Organization - {contrib.project}</p>
-              <p className="text-sm text-gray-600 mb-3">{contrib.desc}</p>
+            <div key={idx} className="border-black border-b-2 border-dotted p-2 rounded-lg shadow-sm mb-4 last:mb-0">
+              <h4 className="text-lg font-bold mb-2 break-words">{contrib.title}</h4>
+              <p className="text-sm text-gray-600 mb-3 break-words">Organization - {contrib.project}</p>
+              <p className="text-sm text-gray-600 mb-3 break-words">{contrib.desc}</p>
 
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-violet-600 flex items-center">
-                  <GitMerge size={16} className="mr-1" />
-                  {contrib.prs} merged
-                </span>
-                <a href={contrib.link} className="flex items-center text-sm text-gray-800 hover:text-gray-600">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <a href={contrib.link} className="flex items-center text-sm text-gray-800 hover:text-gray-600 break-words">
                   <Github size={14} className="mr-1" /> View
                 </a>
               </div>

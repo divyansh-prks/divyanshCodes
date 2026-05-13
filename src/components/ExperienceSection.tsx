@@ -1,5 +1,5 @@
 import { Briefcase, ArrowLeft, ArrowRight } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const experiences = [
   {
@@ -65,32 +65,32 @@ export default function ExperienceSection() {
         <Briefcase className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">Experience</h3>
       </div>
-      <div className="bg-yellow-400  h-[700px] flex flex-col  rounded-lg shadow-lg relative w-full">
-        <div className="w-full px-8 py-7">
+      <div className="bg-yellow-400 min-h-[700px] flex flex-col rounded-lg shadow-lg relative w-full overflow-hidden">
+        <div className="w-full px-4 sm:px-8 py-7 overflow-y-auto pb-20">
           {currentExps.map((exp, idx) => (
-            <div key={idx} className="border-black border-b-2 border-dotted  p-5 rounded-lg shadow-sm mb-4 last:mb-0">
-              <div className="flex justify-between items-start mb-4">
-                <div>
+            <div key={idx} className="border-black border-b-2 border-dotted p-5 rounded-lg shadow-sm mb-4 last:mb-0">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-4">
+                <div className="min-w-0">
                   <h4 className="text-lg font-semibold">{exp.title}</h4>
                        <a
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-blue-600 hover:underline"
+                    className="text-sm text-blue-600 hover:underline break-words"
                   >
                     {exp.company}
                   </a>
                 </div>
-                <span className="text-sm text-gray-500">{exp.duration}</span>
+                <span className="text-sm text-gray-500 shrink-0">{exp.duration}</span>
               </div>
               {Array.isArray(exp.desc) ? (
-                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                  <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 break-words">
                     {exp.desc.map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-gray-700">{exp.desc}</p>
+                  <p className="text-sm text-gray-700 break-words">{exp.desc}</p>
                 )}
               
             </div>

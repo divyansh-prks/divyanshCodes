@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Code, Github, ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 
 const projects = {
@@ -26,6 +26,40 @@ const projects = {
     },
   ],
   backend: [
+
+        {
+      title: 'Autofi',
+      desc: 'A Ai based youtube automated content upload application',
+      tags: ['ts'],
+      code: "https://github.com/divyansh-prks/autofi",
+      demo: "https://autofi-ashy.vercel.app/"
+    },
+
+    {
+       title: 'TranscodeITY',
+      desc: 'A Application which break video into chunks',
+      tags: ['ts'],
+      code: "https://github.com/divyansh-prks/videoTranscoder",
+            demo: "Locally availiable"
+
+    },
+    {
+      title: "Shell IT",
+      desc: "A terminal like shell to run Commands",
+      tags: ['TS'],
+      code : "https://github.com/divyansh-prks/shell", 
+      demo : "locally availiable"
+
+
+    },
+    {
+      title: "Http Server in TS", 
+      desc: "A protocol that used in everywhere ",
+      tags: ['TS'],
+      code : "https://github.com/divyansh-prks/httpsServer",
+      demo : "locally availiable"
+
+    },
        {
       title: 'BuildwithAi',
       desc: 'A website Can make your website using Ai ',
@@ -47,12 +81,15 @@ const projects = {
       title: 'CI/CD Pipeline with GitHub Actions - (InProgress)',
       desc: 'Create a pipeline that builds, tests, and deploys a sample app (Node.js, Python, or Java)',
       tags: ["CI/CD"," automation", "Docker", "testing integration"],
-      code: '#',
-      demo: '#',
+      code: 'inprogres',
+      demo: 'inprogress',
     },
    
   ],
   other: [
+
+
+
     {
       title: 'Student Api',
       desc: 'A full backend Api for student In Golang',
@@ -93,7 +130,7 @@ export default function ProjectsSection() {
   );
 
   // Reset page to 0 when category changes
-  React.useEffect(() => {
+  useEffect(() => {
     setPage(0);
   }, [activeCategory]);
 
@@ -103,7 +140,7 @@ export default function ProjectsSection() {
         <Code className="mr-2" size={20} />
         <h3 className="text-2xl font-bold text-gray-800">Projects</h3>
       </div>
-      <div className="flex justify-center space-x-4 mb-8">
+      <div className="flex flex-wrap justify-center gap-3 mb-8 px-2">
         {categories.map((cat) => (
           <button
             key={cat.key}
@@ -118,22 +155,22 @@ export default function ProjectsSection() {
           </button>
         ))}
       </div>
-      <div className="bg-yellow-400  h-[650px] flex flex-col  rounded-lg shadow-lg relative w-full mb-8">
-        <div className="w-full px-8 py-6">
+      <div className="bg-yellow-400 min-h-[650px] flex flex-col rounded-lg shadow-lg relative w-full mb-8 overflow-hidden">
+        <div className="w-full px-4 sm:px-8 py-6 overflow-y-auto pb-20">
           {paginatedProjects.map((project, idx) => (
-            <div key={idx} className="border-black border-b-2 border-dotted  p-3 rounded-lg shadow-sm mb-4 last:mb-0">
-              <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-              <p className="text-sm text-gray-600 mb-3">{project.desc}</p>
-              <div className="flex space-x-2 mb-4">
+            <div key={idx} className="border-black border-b-2 border-dotted p-3 rounded-lg shadow-sm mb-4 last:mb-0">
+              <h4 className="text-lg font-semibold mb-2 break-words">{project.title}</h4>
+              <p className="text-sm text-gray-600 mb-3 break-words">{project.desc}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="px-2 py-1 bg-gray-100 text-xs rounded-full">{tag}</span>
+                  <span key={i} className="px-2 py-1 bg-gray-100 text-xs rounded-full break-words">{tag}</span>
                 ))}
               </div>
-              <div className="flex space-x-4">
-                <a href={project.code} className="flex items-center text-sm text-gray-800 hover:text-gray-600">
+              <div className="flex flex-wrap gap-4">
+                <a href={project.code} className="flex items-center text-sm text-gray-800 hover:text-gray-600 break-words">
                   <Github size={14} className="mr-1" /> Code
                 </a>
-                <a href={project.demo} className="flex items-center text-sm text-gray-800 hover:text-gray-600">
+                <a href={project.demo} className="flex items-center text-sm text-gray-800 hover:text-gray-600 break-words">
                   <ExternalLink size={14} className="mr-1" /> Demo
                 </a>
               </div>
