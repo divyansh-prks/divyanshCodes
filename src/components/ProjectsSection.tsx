@@ -72,7 +72,7 @@ const projects = {
       desc: 'A website which shorten your url link',
       tags: [ 'React ' ,'NodeJs',  'Express', 'MongoDB'],
       code: 'https://github.com/divyansh-prks/urlShortener',
-      demo: 'https://x.com/coder_divyansh/status/1874487132984901647',
+      demo: 'https://youtu.be/XAGqiAeShGY',
     },
   
   ],
